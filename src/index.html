@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dicoding Interactive Code</title>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="script.js" type="module"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+          integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.4/codemirror.min.js"
+            integrity="sha512-2cmTnLqUwlJs8HnJF3SvFKcsdRf65Ho7wof0IeydYXnyWCiVhaR6u2zTD/BFS+2mIywyiUscY1Er54SS+OJjEw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.4/codemirror.min.css"
+          integrity="sha512-uf06llspW44/LZpHzHT6qBOIVODjWtv4MxCricRxkzvopAlSWnTf6hpZTFxuuZcuNE9CBQhqE0Seu1CoRk84nQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.4/mode/javascript/javascript.min.js"
+            integrity="sha512-I6CdJdruzGtvDyvdO4YsiAq+pkWf2efgd1ZUSK2FnM/u2VuRASPC7GowWQrWyjxCZn6CT89s3ddGI+be0Ak9Fg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.4/theme/base16-light.min.css"
+          integrity="sha512-UCcyAfcA/pJ4lD8YMo+fhwFdJeGNN5QrBlHvTQ1BopVjHWh35HD2JRV3tbwxtabH5ymri426oTfa1UF9Z63B3g=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.4/theme/idea.min.css"
+          integrity="sha512-N+NJU9LvDmlEQyb3xDkcXPOR8SDXQGx4kRs9wCi/U6GPfN/FSsfjIzY61Svd8eg4Y1VcbBL1XhuC3VzzQYmcJg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.4/theme/blackboard.min.css"
+          integrity="sha512-KnHAkH0/78Cyjs1tjV9/+00HK8gu1uKRCCKcWFxX0+rehRh9SYJqiG/2fY4St7H8rPItOsBkgQjN0m4rL5Wobw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+<h1>INTERACTIVE CODE</h1>
+<p>Korem lipsum is jamet ...</p>
+
+<div>
+    ADA 2 TEMA LIGHT dan DARK
+    <button id="btn-theme">GANTI TEMA</button>
+</div>
+
+<div class="row interactive-code my-5" id="interactive-code">
+    <div class="col-12 col-md-3 border border-gray-500 px-0" id="interactive-code-tutorial">
+        <div class="frame__header d-flex align-items-center py-2 px-4 border-bottom">
+            <div class="frame__header--icon mr-2">
+
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 18H9L9.5 20.5H14.5L15 18Z" fill="#FCD34D"/>
+                    <path d="M9.99511 15.9006C9.94016 15.351 9.45011 14.9501 8.90057 15.005C8.35103 15.06 7.95008 15.55 8.00504 16.0996L8.50504 21.0996C8.55616 21.6108 8.98632 22.0001 9.50007 22.0001H14.5001C15.0138 22.0001 15.444 21.6108 15.4951 21.0996L15.9951 16.0996C16.0501 15.55 15.6491 15.06 15.0996 15.005C14.55 14.9501 14.06 15.351 14.005 15.9006L13.5951 20.0001H10.4051L9.99511 15.9006Z"
+                          fill="#F59E0B"/>
+                    <path d="M7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12C17 13.6356 16.2147 15.0878 15.0005 16L14.5 18H9.5L8.99951 16C7.78534 15.0878 7 13.6356 7 12Z"
+                          fill="#FBBF24"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M12 6C8.68629 6 6 8.68629 6 12C6 13.8307 6.82083 15.47 8.11112 16.5692L8.52991 18.2428C8.64129 18.6878 9.04122 19 9.5 19H14.5C14.9588 19 15.3587 18.6878 15.4701 18.2428L15.8889 16.5692C17.1792 15.47 18 13.8307 18 12C18 8.68629 15.3137 6 12 6ZM8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12C16 13.3078 15.3734 14.469 14.3998 15.2005C14.2165 15.3382 14.0861 15.5348 14.0304 15.7572L13.7194 17H10.2806L9.9696 15.7572C9.91393 15.5348 9.78351 15.3382 9.60019 15.2005C8.6266 14.469 8 13.3078 8 12Z"
+                          fill="#F59E0B"/>
+                    <path d="M11 2V5H13V2H11Z" fill="#FBBF24"/>
+                    <path d="M18.3639 4.22185L16.2929 6.29289L17.7071 7.70711L19.7782 5.63606L18.3639 4.22185Z"
+                          fill="#FBBF24"/>
+                    <path d="M19 11L22 11V13L19 13V11Z" fill="#FBBF24"/>
+                    <path d="M2 11H5V13H2V11Z" fill="#FBBF24"/>
+                    <path d="M7.70711 6.29289L5.63602 4.2218L4.2218 5.63602L6.29289 7.70711L7.70711 6.29289Z"
+                          fill="#FBBF24"/>
+                </svg>
+
+            </div>
+            <p class="frame__header--title mb-0 pt-1">Tutorial</p>
+        </div>
+        <div class="frame__body pl-4">
+            <p class="mb-0 px-2 py-4">
+                Nilai variabel yang diinisialisasi menggunakan var dapat diubah kembali nilainya,
+                contoh:
+            </p>
+        </div>
+    </div>
+    <div class="col-12 col-md-6 border border-gray-500 px-0" id="interactive-code-code">
+        <div class="frame__header d-flex align-items-center py-2 px-4 border-bottom justify-content-between">
+            <p class="frame__header--title mb-0 pt-1">Code</p>
+            <div class="frame__header--icon position-relative" id="interactive-code__button-setting">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M15.0307 2H8.96912L8.23407 4.94021C8.07591 5.02473 7.92095 5.11439 7.76941 5.20897L4.855 4.37527L1.82422 9.62473L4.00429 11.7327C4.00137 11.8215 3.9999 11.9106 3.9999 12C3.9999 12.0894 4.00137 12.1785 4.00429 12.2673L1.82422 14.3753L4.855 19.6247L7.76941 18.791C7.92095 18.8856 8.07591 18.9753 8.23407 19.0598L8.96912 22H15.0307L15.7657 19.0598C15.9239 18.9753 16.0788 18.8856 16.2304 18.791L19.1447 19.6247L22.1755 14.3753L19.9955 12.2674C19.9984 12.1786 19.9999 12.0895 19.9999 12C19.9999 11.9105 19.9984 11.8214 19.9955 11.7326L22.1755 9.62473L19.1447 4.37527L16.2304 5.20896C16.0788 5.11439 15.9239 5.02473 15.7657 4.94021L15.0307 2ZM10.5307 4H13.4691L14.0541 6.33993L14.4917 6.54002C14.8401 6.69932 15.1708 6.89113 15.48 7.11167L15.8723 7.39159L18.1935 6.72762L19.6627 9.27239L17.9279 10.9497L17.9731 11.4283C17.9908 11.6162 17.9999 11.8069 17.9999 12C17.9999 12.1931 17.9908 12.3838 17.9731 12.5717L17.9279 13.0503L19.6627 14.7276L18.1935 17.2724L15.8723 16.6084L15.48 16.8883C15.1708 17.1089 14.8401 17.3007 14.4917 17.46L14.0541 17.6601L13.4691 20H10.5307L9.94569 17.6601L9.50809 17.46C9.15969 17.3007 8.82897 17.1089 8.51982 16.8883L8.12744 16.6084L5.80627 17.2724L4.33705 14.7276L6.07184 13.0502L6.02671 12.5716C6.00899 12.3837 5.9999 12.1931 5.9999 12C5.9999 11.8069 6.00899 11.6163 6.02671 11.4284L6.07184 10.9498L4.33705 9.27238L5.80627 6.72761L8.12744 7.39161L8.51982 7.11168C8.82897 6.89113 9.15969 6.69932 9.50809 6.54002L9.94569 6.33993L10.5307 4Z"
+                          fill="#3F3F46"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8ZM10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12Z"
+                          fill="#3F3F46"/>
+                </svg>
+            </div>
+
+            <div class="interactive-code-setting border shadow position-absolute p-3 rounded w-auto h-auto"
+                 id="interactive-code-setting" style="display: none;">
+                <div class="interactive-code-setting-title">
+                    <h3>SETTING</h3>
+                </div>
+                <div class="interactive-code-setting-body row">
+                    <div class="row col-12 mb-2 pr-0">
+                        <div class="col-6">
+                            Theme
+                        </div>
+                        <div class="col-6 d-flex align-items-center justify-content-end pr-0">
+                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-secondary active">
+                                    <input type="radio" name="options" id="light" checked> Light
+                                </label>
+                                <label class="btn btn-secondary">
+                                    <input type="radio" name="options" id="dark"> Dark
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row col-12 pr-0">
+                        <div class="col-6">
+                            Font
+                        </div>
+                        <div class="col-6 d-flex align-items-center justify-content-end pr-0">
+                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-secondary active">
+                                    <input type="radio" name="options" id="12" checked> 12
+                                </label>
+                                <label class="btn btn-secondary">
+                                    <input type="radio" name="options" id="14"> 14
+                                </label>
+                                <label class="btn btn-secondary">
+                                    <input type="radio" name="options" id="16"> 16
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="frame__body interactive-code-output__body">
+            <textarea id="interactive-code-editor">
+            </textarea>
+        </div>
+        <div class="frame__body interactive-code-output__footer px-4 py-2 border-top">
+            <div id="interactive-code-input">
+                <p>Input</p>
+                <textarea class="interactive-code-input__textarea p-2"
+                          placeholder="Teks di sini akan dikirim sebagai stdin"
+                          id="interactive-code-input__input"
+                          style="resize: none; width: 100%;"
+                          rows="5"></textarea>
+            </div>
+            <div class="actions d-flex align-items-center justify-content-between my-4 border-top pt-4"
+                 id="interactive-code-actions">
+                <div class="input-checkbox">
+                    <input type="checkbox" id="interactive-code-input__checkbox" checked>
+                    Input
+                </div>
+                <div class="output-action">
+                    <button class="dcd-btn dcd-btn-secondary mr-2" id="reset-code">
+                        Reset
+                    </button>
+                    <button class="dcd-btn dcd-btn-primary" id="run-code">
+                        Jalankan
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-md-3 border border-gray-500 interactive-code-output px-0 text-light"
+         id="interactive-code-output">
+        <div class="frame__header d-flex align-items-center interactive-code-output__header py-2 px-4 justify-content-between">
+            <p class="frame__header--title mb-0 pt-1">Output</p>
+            <div class="frame__header--icon" id="interactive-code-output__button-fullscreen">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 2C2.44772 2 2 2.44772 2 3V8H4V4H8V2H3Z" fill="white"/>
+                    <path d="M2 21C2 21.5523 2.44772 22 3 22H8L8 20L4 20L4 16H2V21Z" fill="white"/>
+                    <path d="M21 22C21.5523 22 22 21.5523 22 21L22 16H20L20 20L16 20V22L21 22Z" fill="white"/>
+                    <path d="M22 3C22 2.44772 21.5523 2 21 2H16V4L20 4L20 8L22 8V3Z" fill="white"/>
+                </svg>
+            </div>
+        </div>
+        <div class="frame__body interactive-code-output__body pl-4">
+            <div class="mb-0 px-2 py-4" id="code-output">
+                <p class="code-output--hint">Jalankan kode untuk melihat output</p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

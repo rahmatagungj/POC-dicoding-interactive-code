@@ -1,0 +1,33 @@
+{
+  "name": "dcd-new-interactive-code",
+  "version": "1.0.0",
+  "description": "dcd-new-interactive-code",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rahmatagungj/dcd-new-interactive-code.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rahmatagungj/dcd-new-interactive-code/issues"
+  },
+  "homepage": "https://github.com/rahmatagungj/dcd-new-interactive-code#readme",
+  "devDependencies": {
+    "buffer": "^6.0.3",
+    "parcel": "^2.5.0",
+    "prettier-eslint-cli": "^6.0.1",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "@codemirror/state": "^0.20.0",
+    "@codemirror/view": "^0.20.6",
+    "axios": "^0.27.2",
+    "codemirror": "^5.65.4"
+  }
+}
